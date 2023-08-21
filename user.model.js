@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-  name: {
+  company: {
     type: String,
     required: true,
   },
@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  mobNum: {
+  phone: {
     type: Number,
     required: true,
   },
@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  engProLevel: {
+  bizstructure: {
     type: String,
     required: true,
   },
