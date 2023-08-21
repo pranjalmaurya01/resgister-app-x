@@ -2,9 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const User = require('./user.model');
+const cors = require('cors')
 const app = express();
 const port = 5000;
-
+app.use(cors())
+app.options('*', cors());
 app.use(bodyParser.json());
 // Registration endpoint
 app.post('/register', async (req, res) => {
